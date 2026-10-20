@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Как устроен рынок</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+<header class="header container">
+    <a class="brand" href="index.html">
+        <img src="images/logo.svg"
+             alt="Монета со знаком рубля"
+             width="48" height="48">
+        Копейка рубль бережёт.
+    </a>
+
+    <nav class="primary-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="basics.html">Финансовая база</a>
+        <a href="instruments.html">Финансовые инструменты</a>
+        <a href="market.html" class="active"
+           aria-current="page">Как устроен рынок</a>
+        <a href="safety.html">Риски и безопасность</a>
+        <a href="planner.html">Мой финансовый маршрут</a>
+        <a href="passport.html">Паспорт инвестора</a>
+        <a href="task.html">Алгоритмическая задача</a>
+        <a href="https://www.cbr.ru/"
+           target="_blank" rel="noopener noreferrer">Банк России ↗</a>
+    </nav>
+</header>
+
+<main class="container">
+    <div class="hero">
+        <span class="eyebrow">
+            Финансовая грамотность без сложных слов
+        </span>
+
+        <h1>Как устроен рынок</h1>
+
+        <p class="intro">
+            Рынок связывает события сегодняшнего дня
+            с ожиданиями будущего. На решения участников влияют
+            стоимость денег, цены и результаты компаний.
+        </p>
+    </div>
+
+    <nav class="section-nav" aria-label="Разделы страницы">
+        <a href="#key-rate">Ключевая ставка</a>
+        <a href="#inflation">Инфляция</a>
+        <a href="#changes">Изменение цен</a>
+        <a href="#market-table">Обзор</a>
+    </nav>
+
+    <div class="cards">
+        <section class="card" id="key-rate">
+            <span class="card-number">01 / СТАВКА</span>
+            <h2>Ключевая ставка</h2>
+
+            <p>
+                Ключевая ставка Банка России влияет
+                на стоимость денег в экономике.
+                Её изменение постепенно отражается
+                в условиях кредитов, вкладов
+                и финансовых инструментов.
+            </p>
+        </section>
+
+        <section class="card" id="inflation">
+            <span class="card-number">02 / ЦЕНЫ</span>
+            <h2>Инфляция</h2>
+
+            <p>
+                Инфляция — рост общего уровня цен.
+                Поэтому результат накоплений важно оценивать
+                не только в рублях, но и по тому,
+                что на них можно купить.
+            </p>
+        </section>
+
+        <section class="card" id="changes">
+            <span class="card-number">03 / ОЖИДАНИЯ</span>
+            <h2>Почему цены меняются</h2>
+
+            <p>
+                Участники рынка оценивают будущую прибыль,
+                ставки и другие события.
+                Даже хорошая новость может сопровождаться
+                снижением цены, если ожидания были ещё выше.
+            </p>
+        </section>
+    </div>
+
+    <section class="table-card" id="market-table">
+        <h2>Темы рынка в одной таблице</h2>
+
+        <table class="finance-table">
+            <caption>Краткий обзор</caption>
+
+            <thead>
+                <tr>
+                    <th rowspan="2" scope="col">Тема</th>
+                    <th colspan="2" scope="colgroup">Описание</th>
+                </tr>
+
+                <tr>
+                    <th scope="col">Главная мысль</th>
+                    <th scope="col">Раздел</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th scope="row">Ставка</th>
+                    <td>Влияет на стоимость денег.</td>
+                    <td><a href="#key-rate">О ставке</a></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Инфляция</th>
+                    <td>Снижает покупательную способность денег.</td>
+                    <td><a href="#inflation">О ценах</a></td>
+                </tr>
+
+                <tr>
+                    <th scope="row">Ожидания</th>
+                    <td>
+                        <img src="images/market-icon.svg"
+                             width="40" height="40"
+                             alt="Линия колебания цены">
+                        Участники оценивают будущее.
+                    </td>
+                    <td><a href="#changes">Об ожиданиях</a></td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3">
+                        Далее:
+                        <a href="instruments.html">инструменты</a>
+                        и
+                        <a href="safety.html">риски</a>.
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+    </section>
+</main>
+
+<footer class="footer container">
+    <p>Копейка рубль бережёт · Финансовая грамотность</p>
+
+    <nav aria-label="Навигация внизу страницы">
+        <a href="#top">К началу</a>
+        <a href="planner.html#route-form">Составить маршрут</a>
+        <a href="passport.html">Паспорт инвестора</a>
+        <a href="task.html">Задача №1007</a>
+    </nav>
+</footer>
+
+</body>
+</html>

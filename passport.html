@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Паспорт инвестора — DOM и латиница</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+<header class="header container">
+    <a class="brand" href="index.html">
+        <img src="images/logo.svg"
+             alt="Монета со знаком рубля"
+             width="48" height="48">
+        Копейка рубль бережёт.
+    </a>
+
+    <nav class="primary-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="basics.html">Финансовая база</a>
+        <a href="instruments.html">Финансовые инструменты</a>
+        <a href="market.html">Как устроен рынок</a>
+        <a href="safety.html">Риски и безопасность</a>
+        <a href="planner.html">Мой финансовый маршрут</a>
+        <a href="passport.html"
+           class="active"
+           aria-current="page">Паспорт инвестора</a>
+        <a href="task.html">Алгоритмическая задача</a>
+        <a href="https://www.cbr.ru/"
+           target="_blank"
+           rel="noopener noreferrer">Банк России ↗</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="hero">
+        <span class="eyebrow">
+            Личный маршрут к финансовым целям
+        </span>
+
+        <h1>Паспорт инвестора</h1>
+
+        <div class="intro">
+            Большие планы начинаются с первого решения.
+            Здесь собраны данные владельца и его финансовые ориентиры.
+        </div>
+    </div>
+
+    <nav class="section-nav" aria-label="Разделы страницы">
+        <a href="#passport">Паспорт</a>
+        <a href="#translate">Кириллица и латиница</a>
+        <a href="#dom">Работа с DOM</a>
+    </nav>
+
+    <div class="passport-book" id="passport">
+
+        <section class="passport-page"
+                 aria-label="Вторая страница паспорта">
+
+            <span class="card-number">
+                02 / ПАСПОРТ ИНВЕСТОРА
+            </span>
+
+            <div class="passport-symbol" aria-hidden="true">₽</div>
+
+            <h2>Капитал начинается с тебя</h2>
+
+            <p>Выдан: <span id="issuer">Клуб осознанных инвесторов</span></p>
+            <p>Дата выдачи: <span>20.10.2026</span></p>
+
+            <div class="passport-details">
+                <strong>Личная цель</strong>
+                <div>
+                    Создать капитал для образования
+                    и новых возможностей.
+                </div>
+
+                <strong>Инвестиционный горизонт</strong>
+                <div>От трёх лет.</div>
+
+                <strong>Главный принцип</strong>
+                <div>
+                    Сначала разобраться — потом вкладывать.
+                </div>
+            </div>
+
+           
+            <div class="passport-number">
+                INV / 2026 / 001
+            </div>
+        </section>
+
+        <section class="passport-page"
+                 aria-label="Третья страница паспорта">
+
+            <span class="card-number">
+                03 / ВЛАДЕЛЕЦ
+            </span>
+
+            <img class="passport-avatar"
+                 src="images/investor.svg"
+                 width="130"
+                 height="150"
+                 alt="Силуэт владельца паспорта инвестора">
+
+            <p>Фамилия: <span id="surname">Инвесторов</span></p>
+            <p>Имя: <span id="first-name">Иван</span></p>
+            <p>Год рождения: <span id="birth-year">2007</span></p>
+
+            <div class="passport-details">
+                <strong>Город</strong>
+                <div id="city">Москва</div>
+
+                <strong>Статус</strong>
+                <div id="status">Начинающий инвестор</div>
+
+                <strong>Подход</strong>
+                <div>
+                    Регулярность, терпение и внимание к рискам.
+                </div>
+            </div>
+
+            <div class="passport-number">
+                INVESTOR / PERSONAL FINANCIAL ROUTE
+            </div>
+        </section>
+
+    </div>
+
+    <section class="form-card" id="translate">
+        <h2>Изменяем кириллицу на латиницу по клику</h2>
+
+        <p>
+            Нажми кнопку, чтобы изменить написание данных
+            прямо в паспорте. Повторное нажатие вернёт кириллицу.
+        </p>
+
+        <button type="button" id="language-button">
+            Перевести на латиницу
+        </button>
+    </section>
+
+    <section class="form-card" id="dom">
+        <h2>DOM_JS. Считываем информацию из DOM</h2>
+
+        <p>
+            Фамилию, имя и год рождения можно получить
+            из элементов страницы через консоль браузера.
+        </p>
+
+        <pre><code>document.getElementsByTagName('p')[2].childNodes[1].innerText
+document.getElementsByTagName('p')[3].childNodes[1].innerText
+document.getElementsByTagName('p')[4].childNodes[1].innerText</code></pre>
+
+        <button type="button" id="read-button">
+            Считать данные из DOM
+        </button>
+
+        <p class="result-box"
+           id="dom-result"
+           aria-live="polite">
+            Здесь появятся данные владельца.
+        </p>
+
+        <figure id="dom-screenshot" hidden>
+            <img id="dom-image"
+                 width="800"
+                 alt="Получение фамилии, имени и года рождения из DOM в консоли браузера">
+
+            <figcaption>
+                Считывание данных из DOM
+                в инструментах разработчика.
+            </figcaption>
+        </figure>
+    </section>
+
+</main>
+
+<footer class="footer container">
+    <p>Копейка рубль бережёт · Финансовая грамотность</p>
+
+    <nav aria-label="Навигация внизу страницы">
+        <a href="#top">К началу</a>
+        <a href="planner.html#route-form">Составить маршрут</a>
+        <a href="task.html">Задача №1007</a>
+    </nav>
+</footer>
+
+<script>
+
+    let latin = false;
+
+    document.getElementById("language-button")
+        .addEventListener("click", function () {
+            latin = !latin;
+
+            document.getElementById("surname").innerText =
+                latin ? "Investorov" : "Инвесторов";
+
+            document.getElementById("first-name").innerText =
+                latin ? "Ivan" : "Иван";
+
+            document.getElementById("issuer").innerText =
+                latin
+                    ? "Klub osoznannykh investorov"
+                    : "Клуб осознанных инвесторов";
+
+            document.getElementById("city").innerText =
+                latin ? "Moskva" : "Москва";
+
+            document.getElementById("status").innerText =
+                latin
+                    ? "Nachinayushchiy investor"
+                    : "Начинающий инвестор";
+
+            this.innerText =
+                latin
+                    ? "Вернуть кириллицу"
+                    : "Перевести на латиницу";
+
+            document.getElementById("dom-result").innerText =
+                "Данные изменены. Нажми «Считать данные из DOM».";
+        });
+
+
+    document.getElementById("read-button")
+        .addEventListener("click", function () {
+            const paragraphs = document.getElementsByTagName("p");
+
+            const surname =
+                paragraphs[2].childNodes[1].innerText;
+
+            const firstName =
+                paragraphs[3].childNodes[1].innerText;
+
+            const birthYear =
+                paragraphs[4].childNodes[1].innerText;
+
+            document.getElementById("dom-result").innerText =
+                "Фамилия: " + surname +
+                "\nИмя: " + firstName +
+                "\nГод рождения: " + birthYear;
+        });
+
+
+    const screenshot = document.getElementById("dom-image");
+
+    screenshot.addEventListener("load", function () {
+        document.getElementById("dom-screenshot").hidden = false;
+    });
+
+    screenshot.src = "images/dom-console.png";
+</script>
+
+</body>
+</html>

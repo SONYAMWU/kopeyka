@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Решение алгоритмической задачи</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+<header class="header container">
+    <a class="brand" href="index.html">
+        <img src="images/logo.svg"
+             alt="Монета со знаком рубля"
+             width="48"
+             height="48">
+        Копейка рубль бережёт.
+    </a>
+
+    <nav class="primary-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="basics.html">Финансовая база</a>
+        <a href="instruments.html">Финансовые инструменты</a>
+        <a href="market.html">Как устроен рынок</a>
+        <a href="safety.html">Риски и безопасность</a>
+        <a href="planner.html">Мой финансовый маршрут</a>
+        <a href="passport.html">Паспорт инвестора</a>
+        <a href="task.html"
+           class="active"
+           aria-current="page">Алгоритмическая задача</a>
+        <a href="https://www.cbr.ru/"
+           target="_blank"
+           rel="noopener noreferrer">Банк России ↗</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="hero">
+        <span class="eyebrow">Задача №1007</span>
+
+        <h1>Решение алгоритмической задачи</h1>
+
+        <p class="intro">
+            Определить, поместится ли жидкость
+            в кубическую ёмкость, цилиндрическую или в обе.
+        </p>
+    </div>
+
+    <section class="form-card">
+        <h2>Две ёмкости</h2>
+
+        <form action="https://www.bing.com/search"
+              method="get"
+              target="_blank"
+              rel="noopener noreferrer"
+              id="task-form">
+
+            <input type="hidden"
+                   name="task_number"
+                   value="1007">
+
+            <ul>
+                <li>
+                    <p>
+                        <label for="search">
+                            Для поисковика:
+                        </label>
+
+                        <input type="text"
+                               id="search"
+                               name="q"
+                               value="Объём куба и цилиндра"
+                               required>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label for="formulation">
+                            Формулировка задачи:
+                        </label>
+                    </p>
+
+                    <textarea id="formulation"
+                              name="formulation"
+                              rows="7"
+                              readonly
+                              style="box-sizing: border-box; width: 100%; padding: 10px; font: inherit; border: 1px solid #aebcaf; border-radius: 4px;">Имеются две ёмкости: кубическая с ребром A, цилиндрическая с высотой H и радиусом основания R. Определить, поместится ли жидкость объёма M в первую ёмкость, во вторую, в обе.</textarea>
+                </li>
+
+                <li>
+                    <p>
+                        <label for="a">A — ребро куба, м:</label>
+
+                        <input type="number"
+                               id="a"
+                               name="cube_edge"
+                               value="2"
+                               min="0"
+                               step="any"
+                               required>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label for="h">H — высота цилиндра, м:</label>
+
+                        <input type="number"
+                               id="h"
+                               name="cylinder_height"
+                               value="3"
+                               min="0"
+                               step="any"
+                               required>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label for="r">
+                            R — радиус основания цилиндра, м:
+                        </label>
+
+                        <input type="number"
+                               id="r"
+                               name="cylinder_radius"
+                               value="1"
+                               min="0"
+                               step="any"
+                               required>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label for="m">M — объём жидкости, м³:</label>
+
+                        <input type="number"
+                               id="m"
+                               name="liquid_volume"
+                               value="8"
+                               min="0"
+                               step="any"
+                               required>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        <label for="answer">
+                            Результат решения задачи:
+                        </label>
+
+                        <input type="text"
+                               id="answer"
+                               name="result"
+                               value="Не определён"
+                               readonly>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Действие 1:
+                        <button type="button" id="calculate-button">
+                            Вычислить
+                        </button>
+                    </p>
+                </li>
+
+                <li>
+                    <p>
+                        Действие 2:
+                        <button type="submit">
+                            Отправить
+                        </button>
+                    </p>
+                </li>
+            </ul>
+
+            <input type="hidden"
+                   id="cube-volume"
+                   name="cube_volume">
+
+            <input type="hidden"
+                   id="cylinder-volume"
+                   name="cylinder_volume">
+
+        </form>
+
+        <p id="calculation"
+           class="result-box"
+           aria-live="polite">
+            Объём куба: A³.
+            Объём цилиндра: πR²H.
+        </p>
+    </section>
+
+</main>
+
+<footer class="footer container">
+    <p>Копейка рубль бережёт · Финансовая грамотность</p>
+
+    <nav aria-label="Навигация внизу страницы">
+        <a href="#top">К началу</a>
+        <a href="planner.html#route-form">Составить маршрут</a>
+        <a href="passport.html">Паспорт инвестора</a>
+    </nav>
+</footer>
+
+<script>
+    const form = document.getElementById("task-form");
+    const answer = document.getElementById("answer");
+    const calculation = document.getElementById("calculation");
+
+    function clearResult() {
+        answer.value = "Не определён";
+        document.getElementById("cube-volume").value = "";
+        document.getElementById("cylinder-volume").value = "";
+    }
+
+    function calculate() {
+        clearResult();
+
+        if (!form.reportValidity()) {
+            calculation.innerText = "Проверь заполнение полей.";
+            return false;
+        }
+
+        const A = Number(document.getElementById("a").value);
+        const H = Number(document.getElementById("h").value);
+        const R = Number(document.getElementById("r").value);
+        const M = Number(document.getElementById("m").value);
+
+        if (
+            !Number.isFinite(A) ||
+            !Number.isFinite(H) ||
+            !Number.isFinite(R) ||
+            !Number.isFinite(M) ||
+            A <= 0 ||
+            H <= 0 ||
+            R <= 0 ||
+            M < 0
+        ) {
+            answer.value = "Ошибка исходных данных";
+
+            calculation.innerText =
+                "Ребро, высота и радиус должны быть больше нуля. " +
+                "Объём жидкости должен быть не меньше нуля.";
+
+            return false;
+        }
+
+        const cubeVolume = A ** 3;
+        const cylinderVolume = Math.PI * R ** 2 * H;
+
+        if (
+            !Number.isFinite(cubeVolume) ||
+            !Number.isFinite(cylinderVolume) ||
+            cubeVolume === 0 ||
+            cylinderVolume === 0
+        ) {
+            answer.value = "Ошибка исходных данных";
+
+            calculation.innerText =
+                "Размеры слишком велики или слишком малы для расчёта.";
+
+            return false;
+        }
+
+        if (M <= cubeVolume && M <= cylinderVolume) {
+            answer.value = "Поместится в обе ёмкости";
+        } else if (M <= cubeVolume) {
+            answer.value = "Поместится только в кубическую ёмкость";
+        } else if (M <= cylinderVolume) {
+            answer.value = "Поместится только в цилиндрическую ёмкость";
+        } else {
+            answer.value = "Не поместится ни в одну ёмкость";
+        }
+
+        document.getElementById("cube-volume").value =
+            cubeVolume;
+
+        document.getElementById("cylinder-volume").value =
+            cylinderVolume;
+
+        calculation.innerText =
+            "Объём куба: " +
+            cubeVolume.toLocaleString("ru-RU", {
+                maximumSignificantDigits: 10
+            }) +
+            " м³.\nОбъём цилиндра: " +
+            cylinderVolume.toLocaleString("ru-RU", {
+                maximumSignificantDigits: 10
+            }) +
+            " м³.\n\n" +
+            answer.value;
+
+        return true;
+    }
+
+    document.getElementById("calculate-button")
+        .addEventListener("click", calculate);
+
+    form.addEventListener("submit", function (event) {
+
+        if (!calculate()) {
+            event.preventDefault();
+        }
+    });
+
+    form.addEventListener("input", function () {
+        clearResult();
+
+        calculation.innerText =
+            "Данные изменены. Нажми «Вычислить».";
+    });
+</script>
+
+</body>
+</html>

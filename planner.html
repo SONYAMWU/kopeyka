@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Мой финансовый маршрут</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="top">
+
+<header class="header container">
+    <a class="brand" href="index.html">
+        <img src="images/logo.svg"
+             alt="Логотип: монета со знаком рубля"
+             width="48"
+             height="48">
+        Копейка рубль бережёт.
+    </a>
+
+    <nav class="primary-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="basics.html">Финансовая база</a>
+        <a href="instruments.html">Финансовые инструменты</a>
+        <a href="market.html">Как устроен рынок</a>
+        <a href="safety.html">Риски и безопасность</a>
+
+        <a href="planner.html"
+           class="active"
+           aria-current="page">Мой финансовый маршрут</a>
+
+        <a href="passport.html">Паспорт инвестора</a>
+        <a href="task.html">Алгоритмическая задача</a>
+
+        <a href="https://www.cbr.ru/"
+           target="_blank"
+           rel="noopener noreferrer">Банк России ↗</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="hero">
+        <span class="eyebrow">
+            Финансовая грамотность без сложных слов
+        </span>
+
+        <h1>Мой финансовый маршрут</h1>
+
+        <p class="intro">
+            Хороший финансовый план начинается с понимания своей цели.
+            Определи, чего хочешь достичь, сколько готова откладывать
+            и какие инструменты тебе интересно изучить.
+        </p>
+    </div>
+
+    <nav class="section-nav" aria-label="Разделы страницы">
+        <a href="#parameters">Что нужно определить</a>
+        <a href="#next">Как пользоваться</a>
+        <a href="#contact">Контактные данные</a>
+        <a href="#route-form">Заполнить маршрут</a>
+    </nav>
+
+    <div class="cards">
+
+        <section class="card">
+            <span class="card-number">01 / РАЗДЕЛ</span>
+
+            <h2 id="parameters">Что нужно определить</h2>
+
+            <ol>
+                <li>какую цель я хочу достичь;</li>
+                <li>сколько денег для неё потребуется;</li>
+                <li>когда мне понадобятся эти деньги;</li>
+                <li>какую сумму я могу регулярно откладывать;</li>
+                <li>
+                    насколько спокойно я отношусь
+                    к возможным колебаниям стоимости.
+                </li>
+            </ol>
+        </section>
+
+        <section class="card">
+            <span class="card-number">02 / РАЗДЕЛ</span>
+
+            <h2 id="next">Как пользоваться маршрутом</h2>
+
+            <p>
+                Заполни контактные данные, затем укажи финансовую цель,
+                сумму ежемесячных накоплений и интересующие темы.
+                Каждая форма отправляется отдельно.
+            </p>
+
+            <p>
+                Маршрут помогает собрать основные ориентиры:
+                к чему ты стремишься, когда планируешь начать
+                и что хочешь узнать перед следующим финансовым решением.
+            </p>
+        </section>
+
+    </div>
+
+    <figure>
+        <a href="images/route-600x400.svg"
+           target="_blank"
+           rel="noopener noreferrer">
+
+            <img src="images/route-600x400.svg"
+                 width="100"
+                 alt="Схема финансового маршрута">
+        </a>
+
+        <figcaption>
+            Цель → срок → бюджет и резерв → риск и инструмент.
+            Нажми на миниатюру, чтобы открыть большую схему.
+        </figcaption>
+    </figure>
+
+
+    <section class="card form-card">
+        <h2 id="contact">Контактные данные</h2>
+
+        <p id="contact-note" class="form-note">
+            Заполни обязательные поля.
+            После отправки ответ сервера откроется в новой вкладке.
+        </p>
+
+        <form action="https://httpbin.org/post"
+              method="post"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-describedby="contact-note">
+
+            <input type="hidden"
+                   name="form_kind"
+                   value="contact">
+
+            <p>
+                <label for="surname">Фамилия</label>
+
+                <input type="text"
+                       id="surname"
+                       name="surname"
+                       autocomplete="family-name"
+                       required>
+            </p>
+
+            <p>
+                <label for="first-name">Имя</label>
+
+                <input type="text"
+                       id="first-name"
+                       name="first_name"
+                       autocomplete="given-name"
+                       required>
+            </p>
+
+            <p>
+                <label for="group">Группа</label>
+
+                <input type="text"
+                       id="group"
+                       name="group"
+                       placeholder="БЭК2511"
+                       required>
+            </p>
+
+            <p>
+                <label for="phone">Мобильный телефон</label>
+
+                <input type="tel"
+                       id="phone"
+                       name="phone"
+                       autocomplete="tel"
+                       placeholder="+7 999 123-45-67"
+                       required>
+            </p>
+
+            <p>
+                <label for="email">Электронная почта</label>
+
+                <input type="email"
+                       id="email"
+                       name="email"
+                       autocomplete="email"
+                       placeholder="name@example.com"
+                       required>
+            </p>
+
+            <p>
+                <label for="sent-at">Дата отправки</label>
+
+                <input type="date"
+                       id="sent-at"
+                       name="sent_at"
+                       required>
+            </p>
+
+            <button type="submit">Отправить контакты</button>
+            <button type="reset">Сбросить</button>
+
+        </form>
+    </section>
+
+
+
+    <section class="card form-card">
+        <h2 id="route-form">Собрать финансовый маршрут</h2>
+
+        <p id="route-note" class="form-note">
+            Укажи свои параметры или оставь предложенные значения.
+            После отправки ответ сервера откроется в новой вкладке.
+        </p>
+
+        <form action="https://httpbin.org/post"
+              method="post"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-describedby="route-note">
+
+            <input type="hidden"
+                   name="form_kind"
+                   value="financial_route">
+
+            <p>
+                <label for="goal">Финансовая цель</label>
+
+                <input type="text"
+                       id="goal"
+                       name="goal"
+                       value="Финансовая подушка"
+                       required>
+            </p>
+
+            <p>
+                <label for="monthly-amount">Сумма в месяц, ₽</label>
+
+                <input type="number"
+                       id="monthly-amount"
+                       name="monthly_amount"
+                       value="10000"
+                       min="0"
+                       step="1"
+                       required>
+            </p>
+
+            <fieldset>
+                <legend>Твой опыт</legend>
+
+                <p>
+                    <input type="radio"
+                           id="beginner"
+                           name="experience"
+                           value="beginner"
+                           checked>
+
+                    <label for="beginner">
+                        Начинаю с нуля
+                    </label>
+                </p>
+
+                <p>
+                    <input type="radio"
+                           id="some-experience"
+                           name="experience"
+                           value="some">
+
+                    <label for="some-experience">
+                        Знакома с основами
+                    </label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Что хочешь изучить?</legend>
+
+                <p>
+                    <input type="checkbox"
+                           id="deposits"
+                           name="topics"
+                           value="deposits"
+                           checked>
+
+                    <label for="deposits">Вклады</label>
+                </p>
+
+                <p>
+                    <input type="checkbox"
+                           id="bonds"
+                           name="topics"
+                           value="bonds">
+
+                    <label for="bonds">Облигации</label>
+                </p>
+
+                <p>
+                    <input type="checkbox"
+                           id="stocks"
+                           name="topics"
+                           value="stocks">
+
+                    <label for="stocks">Акции</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <label for="start-date">Дата начала</label>
+
+                <input type="date"
+                       id="start-date"
+                       name="start_date"
+                       value="2026-10-21"
+                       required>
+            </p>
+
+            <p>
+                <label for="access-code">Код маршрута</label>
+
+                <input type="password"
+                       id="access-code"
+                       name="access_code"
+                       value="route2026"
+                       aria-describedby="code-note"
+                       required>
+            </p>
+
+            <p id="code-note" class="form-note">
+                Придумай отдельный код для обозначения маршрута.
+                Это не пароль от личного аккаунта.
+            </p>
+
+            <button type="submit">Отправить маршрут</button>
+
+            <button type="reset">
+                Вернуть исходные значения
+            </button>
+
+        </form>
+    </section>
+
+</main>
+
+<footer class="footer container">
+    <p>Копейка рубль бережёт · Финансовая грамотность</p>
+
+    <nav aria-label="Навигация внизу страницы">
+        <a href="#top">К началу</a>
+        <a href="#route-form">К финансовому маршруту</a>
+        <a href="passport.html">Паспорт инвестора</a>
+        <a href="task.html">Алгоритмическая задача</a>
+    </nav>
+</footer>
+
+<script>
+
+    const today = new Date();
+
+    const dateValue =
+        today.getFullYear() + "-" +
+        String(today.getMonth() + 1).padStart(2, "0") + "-" +
+        String(today.getDate()).padStart(2, "0");
+
+    const sentAt = document.getElementById("sent-at");
+
+    sentAt.value = dateValue;
+    sentAt.defaultValue = dateValue;
+</script>
+
+</body>
+</html>
