@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="600" height="600"
+     viewBox="0 0 600 600">
+
+  <rect width="600" height="600" fill="#f7f4e8"/>
+
+  <circle cx="300" cy="175" r="105"
+          fill="#b6d49f"/>
+
+  <path d="M90 510 V390
+           C90 280 180 275 300 275
+           C420 275 510 320 510 390
+           V510 Z"
+        fill="#40b982"/>
+
+  <text x="300" y="560"
+        text-anchor="middle"
+        font-family="Arial"
+        font-size="48"
+        fill="#ffffff">
+    INVESTOR
+  </text>
+
+</svg>
+

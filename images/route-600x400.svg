@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+<rect width="600" height="400" rx="2" fill="#eef3ed"/>
+<g font-family="Arial" fill="#28332d">
+<text x="32" y="48" font-size="26" font-weight="bold">Мой финансовый маршрут</text>
+<path d="M55 103 V327" stroke="#326947" stroke-width="4"/>
+<g fill="#759b78"><circle cx="55" cy="105" r="20"/><circle cx="55" cy="179" r="20"/><circle cx="55" cy="253" r="20"/><circle cx="55" cy="327" r="20"/></g>
+<g fill="#203d29" font-size="20" text-anchor="middle"><text x="55" y="112">1</text><text x="55" y="186">2</text><text x="55" y="260">3</text><text x="55" y="334">4</text></g>
+<g font-size="21"><text x="94" y="102">Цель и сумма</text><text x="94" y="176">Срок</text><text x="94" y="250">Бюджет и резерв</text><text x="94" y="324">Риск и инструмент</text></g>
+<g fill="#59655d" font-size="16"><text x="94" y="126">На что нужны деньги и сколько?</text><text x="94" y="200">Когда понадобятся накопления?</text><text x="94" y="274">Сколько можно откладывать?</text><text x="94" y="348">Какие условия нужно изучить?</text></g>
+</g>
+</svg>
